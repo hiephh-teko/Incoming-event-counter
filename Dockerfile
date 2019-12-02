@@ -13,9 +13,6 @@ RUN chmod a+x set_env.sh
 
 # RUN apt-get -y install cron
 
-ENV TZ=UTC
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
 ADD ./bash/crontab /etc/cron.d/scan
 
 RUN chmod 0644 /etc/cron.d/scan

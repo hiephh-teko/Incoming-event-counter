@@ -1,5 +1,4 @@
 # start
-TZ=UTC
-27 8 * * * /counter/bash/test_cli.sh >> /var/log/cron.log 2>&1 'echo date("Y-m-d H:i:s\n");'
+49 9 * * * /counter/bash/test_cli.sh >> /var/log/cron.log 2>&1 'echo date("Y-m-d H:i:s\n");'
 #*/1 * * * * cd /sample && /usr/local/bin/python main.py >> /var/log/cron.log 2>&1
 # end
