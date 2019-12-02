@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  counter-cron:
+    container_name: counter
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/counter
+      - .:/var/log
+    env_file:
+      - .env
+    restart: on-failure
+
